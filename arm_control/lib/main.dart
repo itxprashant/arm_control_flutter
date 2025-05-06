@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'serial_home.dart';
 import 'pick_item_homepage.dart';
 import 'voice_control.dart';
+import 'about_page.dart';
+// import 'servo_control.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,11 +18,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Pick and Place Robot',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Pick and Place Robot'),
     );
   }
 }
@@ -40,6 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
     SerialHomePage(),
     PickItemHomepage(),
     VoiceControlPage(),
+    AboutPage(),
   ];
 
   void _onDrawerItemTapped(int index) {
@@ -79,6 +82,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ListTile(
               title: const Text("Voice Control"),
               onTap: () => _onDrawerItemTapped(3),
+            ),
+            ListTile(
+              title: const Text("About"),
+              onTap: () => _onDrawerItemTapped(4),
             ),
           ],
         ),
