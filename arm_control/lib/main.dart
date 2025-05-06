@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:usb_serial/usb_serial.dart';
-import 'package:usb_serial/transaction.dart';
+// import 'package:usb_serial/usb_serial.dart';
+// import 'package:usb_serial/transaction.dart';
 import 'serial_home.dart';
 import 'pick_item_homepage.dart';
 import 'voice_control.dart';
