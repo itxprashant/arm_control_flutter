@@ -1,3 +1,4 @@
+import 'package:arm_control/servo_control.dart';
 import 'package:flutter/material.dart';
 // import 'package:usb_serial/usb_serial.dart';
 // import 'package:usb_serial/transaction.dart';
@@ -38,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
   static final List<Widget> _pages = <Widget>[
-    Center(child: Text("Homepage")),
+    ServoControlPage(),
     SerialHomePage(),
     PickItemHomepage(),
     VoiceControlPage(),
@@ -68,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text('Drawer Header'),
             ),
             ListTile(
-              title: const Text('Homepage'),
+              title: const Text('Servo Control'),
               onTap: () => _onDrawerItemTapped(0),
             ),
             ListTile(
